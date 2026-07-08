@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI',sans-serif;
+        }
+
+        body{
+            background: #dedcee;
+            color:#333;
+        }
+
+        /* HEADER */
+        header{
+            background:linear-gradient(135deg, rgba(255, 105, 190, 0.94), #0d1d88);
+            color:#fff;
+            text-align:center;
+            padding:70px 20px;
+        }
+
+        header h1{
+            font-size:2.7rem;
+        }
+
+        header p{
+            margin-top:10px;
+            font-size:1.1rem;
+        }
+
+        /* NAV */
+        nav{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            padding:15px;
+            background:white;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav a{
+            color:#ff1493;
+            text-decoration:none;
+            font-weight:bold;
+            font-family:"Courier New", monospace;
+        }
+
+        nav a:hover{
+            color:#ff69b4;
+        }
+
+        /* SECTIONS */
+        section{
+            max-width:1100px;
+            margin:auto;
+            padding:50px 20px;
+        }
+
+        h2{
+            color: rgba(173, 20, 215, 0.92);
+            margin-bottom:20px;
+        }
+
+        /* CARDS */
+        .card{
+            background: #c499c3;
+            padding:20px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom:20px;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+        }
+
+        /* EXPERIENCE layout */
+        .grid{
+            display:grid;
+            grid-template-columns:1fr;
+            gap:20px;
+        }
+
+        /* LISTS */
+        ul{
+            padding-left:20px;
+        }
+
+        ul li{
+            margin-bottom:8px;
+        }
+
+        /* CODE BOX */
+        .code-box{
+            background: rgba(59, 121, 215, 0.98);
+            color: #ffffff;
+            padding:15px;
+            border-radius:10px;
+            margin-top:15px;
+            font-family:"Courier New", monospace;
+        }
+
+        /* SKILLS TAGS */
+        .skills span{
+            display:inline-block;
+            background: #eae4ff;
+            color: #e014ff;
+            padding:8px 12px;
+            border-radius:20px;
+            margin:6px;
+            font-size:0.9rem;
+            transition:0.2s;
+        }
+
+        .skills span:hover{
+            background: #83326f;
+            color:white;
+        }
+
+        /* PROGRESS BARS */
+        .bar{
+            background: #eae4ff;
+            border-radius:10px;
+            margin:10px 0;
+            overflow:hidden;
+        }
+
+        .bar div{
+            height:10px;
+            background: rgba(169, 20, 255, 0.97);
+        }
+
+        /* CONTACT BUTTON */
+        button{
+            background: #ff14a1;
+            border:none;
+            color:white;
+            padding:12px 20px;
+            border-radius:25px;
+            cursor:pointer;
+            margin-top:10px;
+        }
+
+        button:hover{
+            background: #962960;
+        }
+
+        /* FOOTER */
+        footer{
+            text-align:center;
+            padding:20px;
+            background: #797374;
+            color:white;
+        }
+
+        /* Animated line */
+        .color-line {
+            height: 5px;
+            background: linear-gradient(90deg, #605bb4, #452b9d, #0724e3);
+            background-size: 300% 300%;
+            animation: moveColors 5s ease infinite;
+        }
+
+        .nav-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #cc14ff;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 5px;
+        }
+
+        /* Hover effect */
+        .nav-btn:hover {
+            background-color: #5b205a;
+            transform: scale(1.05);
+        }
+
+        .glow-circle {
+            width: 1200px;
+            height: 1050px;
+            border-radius: 30px;
+
+            background: radial-gradient(circle, rgba(151, 34, 229, 0.3), transparent 70%);
+
+            box-shadow:
+                    0 0 80px rgba(20, 32, 61, 0.6),
+                    0 0 160px rgba(14, 73, 60, 0.4);
+
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            pointer-events: none;
+            z-index: 0;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <p><strong>LEBONE KARABELO MOTAUNG</strong></p>
+        <p><strong>TEST SPECIALIST | WEB AND MOBILE | API | BUSINESS ANALYST</strong></p>
+    </div>
+    <div class="glow-circle"></div>
+</header>
+
+
+<nav>
+  <!--  <div class="container">
+        <a href="#about"><strong>ABOUT</strong></a>
+        <a href="#skills"><strong>SKILLS</strong></a>
+        <a href="#education"><strong>EDUCATION</strong></a>
+        <a href="#contact"><strong>CONTACT</strong></a>
+    </div>-->
+    <nav>
+        <div class="container">
+            <a href="#about" class="nav-btn">ABOUT</a>
+            <a href="#skills" class="nav-btn">SKILLS</a>
+            <a href="#education" class="nav-btn">EDUCATION</a>
+            <a href="#contact" class="nav-btn">CONTACT</a>
+        </div>
+    </nav>
+</nav>
+</nav>
+
+<section id="about">
+    <h2>About</h2>
+    <div class="card">
+        <p>Informatics professional with experience as a Business Analyst and a Software Test Analyst skilled in analysing business processes, gathering requirements, and designing system solutions that improve efficiency and support business objectives. Experienced in software testing, including test case design, execution, defect reporting, and collaboration with development teams to ensure high-quality system delivery. Strong ability to bridge the gap between business requirements and technical implementation.
+            Also brings experience in academic tutoring and mentoring which has strengthened leadership, communication, and problem solving skills, contributing to a well-rounded professional profile.</p>
+
+        <div class="code-box">
+            if (requirements == unclear) {<br>
+            &nbsp;&nbsp;clarify();<br>
+            }<br><br>
+            if (bugFound) {<br>
+            &nbsp;&nbsp;logIssue();<br>
+            &nbsp;&nbsp;verifyFix();<br>
+            }
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Experience</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Business Analyst – 4IR | Pretoria</h3>
+            <p><i>Jul 2025 – Present</i></p>
+            <ul>
+                <li>Requirements analysis & stakeholder engagement</li>
+                <li>Process modelling (Visio, Enterprise Architect)</li>
+                <li>Jira & Confluence documentation</li>
+                <li>SQL data analysis</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Junior BA – Rand Connect</h3>
+            <p><i>2024 – 2025</i></p>
+            <ul>
+                <li>Translate business requirements</li>
+                <li>Design process maps and workflows</li>
+                <li>Stakeholder collaboration</li>
+            </ul>
+
+        </div>
+
+        <div class="card">
+            <h3>Junior BA – ICEP</h3>
+            <p><i>2023 – 2024</i></p>
+            <ul>
+                <li>Business analysis and Business documentation</li>
+                <li>System design and System Analysis</li>
+                <li>Testing & defect tracking</li>
+                <li>Team collaboration</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="card skills">
+        <span>Requirements Analysis</span>
+        <span>Stakeholder Engagement</span>
+        <span>Process Modelling</span>
+        <span>Manual and Automation Testing</span>
+        <span>Test case design and Execution</span>
+        <span>Defect logging and Tracking</span>
+        <span>Jira and Confluence</span>
+        <span>MS Visio</span>
+        <span>MS Office</span>
+        <span>SQL</span>
+        <span>Enterprose Architect</span>
+    </div>
+
+    <div class="card">
+        <p>Testing & QA</p>
+        <div class="bar"><div style="width:90%"></div></div>
+
+        <p>Business Analysis</p>
+        <div class="bar"><div style="width:85%"></div></div>
+
+        <p>SQL</p>
+        <div class="bar"><div style="width:70%"></div></div>
+    </div>
+</section>
+
+<section id="education">
+    <h2>Education & Certifications</h2>
+    <div class="card">
+        <p><strong>Diploma in Informatics</strong> (2021–2024)</p>
+        <ul>
+            <li>Tester Foundation Level</li>
+            <li>Hashgraph Developer</li>
+            <li>Academic Mentor</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contacts</h2>
+    <div class="card">
+    <strong>
+        <p>
+            Email:
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Karabelolbmotaung02@gmail.com" target="_blank">
+                Click here to send an Email
+            </a>
+        </p>
+        <p><i class="fas fa-phone"></i> Cell: <a href="tel:+27665972425" class="contact-link">+27(66) 597 2425</a></p>
+        <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/27665972425" target="_blank" class="contact-link">Click here</a></p>
+        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="www.linkedin.com/in/lebone-motaung-71b676279" target="_blank" class="contact-link">Connect With Me</a></p>
+    </strong>
+</section>
+
+<footer>
+    <p>© 2026 Portfolio</p>
+</footer>
+
+</body>
+</html>
